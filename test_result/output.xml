@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210411 21:21:05.462" generator="Robot 3.1.1 (Python 2.7.10 on darwin)">
+<suite source="/Users/cho/Downloads/selenium/test_case/searchWarranty.robot" id="s1" name="searchWarranty">
+<kw type="setup" name="Open &quot;chrome&quot; browser" library="searchWarrantyKeyword">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://warrant.kgi.com/EDWebSite/Views/WarrantSearch/WarrantSearch.aspx</arg>
+<arg>${browserName}</arg>
+</arguments>
+<msg timestamp="20210411 21:21:05.906" level="INFO">Opening browser 'chrome' to base url 'https://warrant.kgi.com/EDWebSite/Views/WarrantSearch/WarrantSearch.aspx'.</msg>
+<status status="PASS" endtime="20210411 21:21:18.500" starttime="20210411 21:21:05.906"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210411 21:21:18.680" starttime="20210411 21:21:18.500"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.2 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:18.680" starttime="20210411 21:21:18.680"></status>
+</kw>
+<status status="PASS" endtime="20210411 21:21:18.681" starttime="20210411 21:21:05.905"></status>
+</kw>
+<test id="s1-t1" name="1.1.1 search warranty">
+<kw name="set broker name to &quot;全部&quot;" library="searchWarrantyKeyword">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//span[@aria-owns='ddlIssuer_listbox']/..//span[@class='k-select']</arg>
+<arg>${timeOutSeconds}</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:19.121" starttime="20210411 21:21:18.682"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[@aria-owns='ddlIssuer_listbox']/..//span[@class='k-select']</arg>
+</arguments>
+<msg timestamp="20210411 21:21:19.121" level="INFO">Clicking element '//span[@aria-owns='ddlIssuer_listbox']/..//span[@class='k-select']'.</msg>
+<status status="PASS" endtime="20210411 21:21:19.711" starttime="20210411 21:21:19.121"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//ul[@id='ddlIssuer_listbox']/..//li[contains(text(),'${brokerName}')]</arg>
+<arg>${timeOutSeconds}</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:19.923" starttime="20210411 21:21:19.711"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul[@id='ddlIssuer_listbox']/..//li[contains(text(),'${brokerName}')]</arg>
+</arguments>
+<msg timestamp="20210411 21:21:19.924" level="INFO">Clicking element '//ul[@id='ddlIssuer_listbox']/..//li[contains(text(),'全部')]'.</msg>
+<status status="PASS" endtime="20210411 21:21:20.364" starttime="20210411 21:21:19.923"></status>
+</kw>
+<status status="PASS" endtime="20210411 21:21:20.364" starttime="20210411 21:21:18.682"></status>
+</kw>
+<kw name="enter warranty type &quot;認購&quot;" library="searchWarrantyKeyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[@aria-owns='ddlCP_listbox']</arg>
+</arguments>
+<msg timestamp="20210411 21:21:20.365" level="INFO">Clicking element '//span[@aria-owns='ddlCP_listbox']'.</msg>
+<status status="PASS" endtime="20210411 21:21:20.829" starttime="20210411 21:21:20.365"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//ul[@id='ddlCP_listbox']/li[contains(text(),'${warrantyType}')]</arg>
+<arg>${timeOutSeconds}</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:21.250" starttime="20210411 21:21:20.830"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul[@id='ddlCP_listbox']/li[contains(text(),'${warrantyType}')]</arg>
+</arguments>
+<msg timestamp="20210411 21:21:21.251" level="INFO">Clicking element '//ul[@id='ddlCP_listbox']/li[contains(text(),'認購')]'.</msg>
+<status status="PASS" endtime="20210411 21:21:21.695" starttime="20210411 21:21:21.251"></status>
+</kw>
+<status status="PASS" endtime="20210411 21:21:21.696" starttime="20210411 21:21:20.364"></status>
+</kw>
+<kw name="enter days of expire more than &quot;90日&quot; days" library="searchWarrantyKeyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[@aria-owns='numLastDaysFrom_listbox']</arg>
+</arguments>
+<msg timestamp="20210411 21:21:21.697" level="INFO">Clicking element '//span[@aria-owns='numLastDaysFrom_listbox']'.</msg>
+<status status="PASS" endtime="20210411 21:21:22.158" starttime="20210411 21:21:21.696"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//ul[@id='numLastDaysFrom_listbox']/li[contains(text(),'${numOfDays}')]</arg>
+<arg>${timeOutSeconds}</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:22.579" starttime="20210411 21:21:22.158"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul[@id='numLastDaysFrom_listbox']/li[contains(text(),'${numOfDays}')]</arg>
+</arguments>
+<msg timestamp="20210411 21:21:22.580" level="INFO">Clicking element '//ul[@id='numLastDaysFrom_listbox']/li[contains(text(),'90日')]'.</msg>
+<status status="PASS" endtime="20210411 21:21:23.018" starttime="20210411 21:21:22.580"></status>
+</kw>
+<status status="PASS" endtime="20210411 21:21:23.018" starttime="20210411 21:21:21.696"></status>
+</kw>
+<kw name="set in percentage &quot;價內5%&quot; and out percentage &quot;價外5%&quot;" library="searchWarrantyKeyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[@aria-owns='ddlInOutPercentFrom_listbox']</arg>
+</arguments>
+<msg timestamp="20210411 21:21:23.019" level="INFO">Clicking element '//span[@aria-owns='ddlInOutPercentFrom_listbox']'.</msg>
+<status status="PASS" endtime="20210411 21:21:23.479" starttime="20210411 21:21:23.019"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//ul[@id='ddlInOutPercentFrom_listbox']/li[contains(text(),'${inPercentage}')]</arg>
+<arg>${timeOutSeconds}</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:23.900" starttime="20210411 21:21:23.480"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul[@id='ddlInOutPercentFrom_listbox']/li[contains(text(),'${inPercentage}')]</arg>
+</arguments>
+<msg timestamp="20210411 21:21:23.901" level="INFO">Clicking element '//ul[@id='ddlInOutPercentFrom_listbox']/li[contains(text(),'價內5%')]'.</msg>
+<status status="PASS" endtime="20210411 21:21:24.341" starttime="20210411 21:21:23.901"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[@aria-owns='ddlInOutPercentTo_listbox']</arg>
+</arguments>
+<msg timestamp="20210411 21:21:24.342" level="INFO">Clicking element '//span[@aria-owns='ddlInOutPercentTo_listbox']'.</msg>
+<status status="PASS" endtime="20210411 21:21:24.802" starttime="20210411 21:21:24.341"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//ul[@id='ddlInOutPercentTo_listbox']/li[contains(text(),'${outPercentage}')]</arg>
+<arg>${timeOutSeconds}</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:25.223" starttime="20210411 21:21:24.802"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul[@id='ddlInOutPercentTo_listbox']/li[contains(text(),'${outPercentage}')]</arg>
+</arguments>
+<msg timestamp="20210411 21:21:25.223" level="INFO">Clicking element '//ul[@id='ddlInOutPercentTo_listbox']/li[contains(text(),'價外5%')]'.</msg>
+<status status="PASS" endtime="20210411 21:21:25.660" starttime="20210411 21:21:25.223"></status>
+</kw>
+<status status="PASS" endtime="20210411 21:21:25.660" starttime="20210411 21:21:23.018"></status>
+</kw>
+<kw name="enter stock id &quot;6531&quot;" library="searchWarrantyKeyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@name='ctlUnderlying_input']/../span[@class='k-select']</arg>
+</arguments>
+<msg timestamp="20210411 21:21:25.661" level="INFO">Clicking element '//input[@name='ctlUnderlying_input']/../span[@class='k-select']'.</msg>
+<status status="PASS" endtime="20210411 21:21:26.285" starttime="20210411 21:21:25.661"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//ul[@id='cmbUnderlying_listbox']/li[contains(text(),'${stockID}')]</arg>
+<arg>${timeOutSeconds}</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:26.497" starttime="20210411 21:21:26.285"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//ul[@id='cmbUnderlying_listbox']/li[contains(text(),'${stockID}')]</arg>
+</arguments>
+<msg timestamp="20210411 21:21:26.498" level="INFO">Clicking element '//ul[@id='cmbUnderlying_listbox']/li[contains(text(),'6531')]'.</msg>
+<status status="PASS" endtime="20210411 21:21:26.944" starttime="20210411 21:21:26.498"></status>
+</kw>
+<status status="PASS" endtime="20210411 21:21:26.944" starttime="20210411 21:21:25.661"></status>
+</kw>
+<kw name="click search button" library="searchWarrantyKeyword">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='btnQuery']</arg>
+</arguments>
+<msg timestamp="20210411 21:21:26.945" level="INFO">Clicking element '//input[@id='btnQuery']'.</msg>
+<status status="PASS" endtime="20210411 21:21:27.408" starttime="20210411 21:21:26.944"></status>
+</kw>
+<status status="PASS" endtime="20210411 21:21:27.408" starttime="20210411 21:21:26.944"></status>
+</kw>
+<kw name="should display warranty search result" library="searchWarrantyKeyword">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//td[contains(text(),'成交價')]/../..//label[@id='undDeal']</arg>
+<arg>${timeOutSeconds}</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:27.622" starttime="20210411 21:21:27.408"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//td[contains(text(),'成交量')]/../..//label[@id='undVolume']</arg>
+<arg>${timeOutSeconds}</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:27.833" starttime="20210411 21:21:27.622"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//td[contains(text(),'漲跌幅')]/../..//label[@id='undChangePercent']</arg>
+<arg>${timeOutSeconds}</arg>
+</arguments>
+<status status="PASS" endtime="20210411 21:21:28.044" starttime="20210411 21:21:27.833"></status>
+</kw>
+<status status="PASS" endtime="20210411 21:21:28.044" starttime="20210411 21:21:27.408"></status>
+</kw>
+<tags>
+<tag>P1</tag>
+</tags>
+<status status="PASS" endtime="20210411 21:21:28.045" critical="yes" starttime="20210411 21:21:18.681"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20210411 21:21:28.511" starttime="20210411 21:21:28.046"></status>
+</kw>
+<status status="PASS" endtime="20210411 21:21:28.511" starttime="20210411 21:21:05.463"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">P1</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="searchWarranty" pass="1">searchWarranty</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,2 @@
+*** Variables ***
+${timeOutSeconds}       5
